@@ -29,8 +29,8 @@ services:
     sync: false
   - key: DOMAIN
     sync: false
-  region: moscow
+  region: oregon
   buildCommand: pip install -r requirements.txt
   startCommand: uvicorn app.main:app --host 0.0.0.0 --port $PORT
-  healthCheckPath: /afropalsjobs.ru
+  healthCheckPath: /health
   autoDeployTrigger: commit
